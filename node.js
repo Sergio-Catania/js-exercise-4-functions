@@ -53,3 +53,26 @@ function reverseString(parola) {
 }
 
 reverseString(parolaUtente);
+
+
+/*3. Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+es. [a,b,c], [1,2,3] → [a,1,b,2,c,3]*/
+
+const frutta = ["mela", "pera", "banana"];
+const numeri = [1, 2, 3];
+
+function mergeAltV2(arr1, arr2) {
+  const result = [];
+  let switcher = true;
+  for (let i = 0; i < arr1.length + arr2.length; i++) {
+    if (switcher) {
+      result.push(arr1[i / 2]);
+    } else {
+      result.push(arr2[(i - 1) / 2]);
+    }
+    switcher = !switcher;
+  }
+  return result;
+}
+
+console.log(mergeAltV2(frutta, numeri));
