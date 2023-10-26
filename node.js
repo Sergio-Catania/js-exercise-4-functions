@@ -38,3 +38,18 @@ function controlloLunghezza(elemento1, elemento2) {
   }
 }
 controlloLunghezza(parola1, parola2);
+
+
+/* 2. Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC). Quindi, chiedere all’utente quale parola vuole girare.
+BONUS: se la parola scelta dall’utente è un palindromo, avvisalo*/
+
+const parolaUtente = prompt("scrivi una parola");
+
+function reverseString(parola) {
+  let splitString = parola.split("");
+  let reverseArray = splitString.reverse();
+  let joinArray = reverseArray.join("");
+  console.log(joinArray);
+}
+
+reverseString(parolaUtente);
